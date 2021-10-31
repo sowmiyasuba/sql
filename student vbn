@@ -1,0 +1,64 @@
+
+
+create database firstprogram;//to create file in sql
+
+use firstprogram;
+
+create table firstprogram (rollno int, studentname varchar(20),collegename varchar(30));
+
+desc firstprogram ;
+
+-----------------------------------------------------------------------------------
+
+commit and roollback:(tcl)
+
+set autocommit=0;
+
+select * from firstprogram;
+
+insert into firstprogram values(4,"durga","v.s.b");
+
+commit;
+
+rollback;
+
+-------------------------------------------------------------
+
+delete:
+--------
+
+delete from firstprogram;//delete all row and colum
+
+rollback ;(we can rollback all data if we use delete)
+
+truncate:if we use truncate we cant rollback data.permanent delete.
+
+rollback deletes last column from table;
+
+drop database firstprogram;//delete database
+
+show databases;
+-----------------------------------------------
+
+Aggregate function and aliases:
+
+select * from student;
+
+select count(*) as count from student;
+
+select min(marks) from student;
+
+select avg(marks) as "rage marks" from student;
+
+select sum(marks) as sum from student;
+-----------------------------------------------
+
+ascending and descending order:
+
+select * from student;
+
+select * from student order by age desc;
+
+
+if we use commit ti will be stored permanently;
+-------------------------------------------------------------
